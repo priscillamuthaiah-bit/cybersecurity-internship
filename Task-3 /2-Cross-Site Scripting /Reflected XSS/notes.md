@@ -33,3 +33,10 @@ I manually patched the `low.php` source files to demonstrate how to secure these
 **Vulnerable Code:**
 ```php
 echo '<pre>Hello ' . $_GET[ 'name' ] . '</pre>';
+
+Secured Code (My Implementation):
+// THE FIX: Use htmlspecialchars to encode the input
+// This converts <script> into &lt;script&gt; so the browser treats it as text.
+$name = htmlspecialchars( $_GET[ 'name' ], ENT_QUOTES, 'UTF-8' );
+
+echo '<pre>Hello ' . $name . '</pre>';
