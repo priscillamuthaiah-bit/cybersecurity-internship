@@ -22,7 +22,7 @@ File: vulnerabilities/xss_s/source/low.php
 
 PHP
 <?php
-if( isset( $_POST[ 'btnSign' ] ) ) {
+  if( isset( $_POST[ 'btnSign' ] ) ) {
     // Input is trimmed but NOT sanitized or encoded
     $message = trim( $_POST[ 'mtxMessage' ] );
     $name    = trim( $_POST[ 'txtName' ] );
@@ -36,7 +36,7 @@ if( isset( $_POST[ 'btnSign' ] ) ) {
 The Fix
 
 <?php
-if( isset( $_POST[ 'btnSign' ] ) ) {
+  if( isset( $_POST[ 'btnSign' ] ) ) {
     // FIX: Apply htmlspecialchars() to sanitize input
     $message = htmlspecialchars(trim($_POST['mtxMessage']), ENT_QUOTES, 'UTF-8');
     $name    = htmlspecialchars(trim($_POST['txtName']), ENT_QUOTES, 'UTF-8');
