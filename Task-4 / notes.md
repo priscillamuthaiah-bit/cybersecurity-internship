@@ -58,4 +58,3 @@
 * [cite_start]**Responsible Disclosure:** All activities were performed within an isolated lab for educational purposes[cite: 196].
 
 ---
-[cite_start]*Note: This documentation is part of the ApexPlanet Internship deliverables for Task 4[cite: 194, 225].*
